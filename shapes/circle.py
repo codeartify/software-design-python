@@ -2,6 +2,10 @@ from shapes.color import Color
 from shapes.shape import Shape
 
 
+def square(value):
+    return value * value
+
+
 class Circle(Shape):
     def __init__(self, x, y, r):
         if r <= 0:
@@ -28,7 +32,7 @@ class Circle(Shape):
     def contains(self, x_coords, y_coords, i):
         delta_x = x_coords[i] - self.x
         delta_y = y_coords[i] - self.y
-        result = delta_x * delta_x + delta_y * delta_y <= self.r * self.r
+        result = square(delta_x) + square(delta_y) <= square(self.r)
         if result:
             self.number_of_contained_points += 1
         return result
