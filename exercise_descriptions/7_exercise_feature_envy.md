@@ -1,12 +1,8 @@
 # Feature Envy
 
-> Exercise branch: **exercise_6** 
+> Exercise branch: **solution_primitive_obsession**
 >
-> Solution branch: **exercise_6_part_1**
->
-> Solution branch: **exercise_6_part_2**
->
-> Solution branch: **exercise_7**
+> Solution branch: **solution_feature_envy**
 
 ## Exercise
 
