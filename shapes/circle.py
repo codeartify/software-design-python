@@ -6,6 +6,23 @@ def square(value):
     return value * value
 
 
+def validate_coordinates(x_coords, y_coords):
+    if is_empty(x_coords):
+        raise ValueError("x coordinates are empty")
+    if is_empty(y_coords):
+        raise ValueError("y coordinates are empty")
+    if differ_in_length(x_coords, y_coords):
+        raise ValueError("Not every provided x coordinate has a matching y coordinate")
+
+
+def differ_in_length(x_coords, y_coords):
+    return len(x_coords) != len(y_coords)
+
+
+def is_empty(coords):
+    return coords is None or len(coords) == 0
+
+
 class Circle(Shape):
     def __init__(self, x, y, r):
         if r <= 0:
@@ -16,12 +33,10 @@ class Circle(Shape):
         self.color = Color(Color.GREEN)
 
     def count_contained_points(self, x_coords, y_coords):
-        if x_coords is None or len(x_coords) <= 0:
-            raise ValueError("x coordinates are empty")
-        if y_coords is None or len(y_coords) <= 0:
-            raise ValueError("y coordinates are empty")
-        if len(x_coords) != len(y_coords):
-            raise ValueError("Not every provided x coordinate has a matching y coordinate")
+        validate_coordinates(x_coords, y_coords)
+        return self.count_points_within_circle(x_coords, y_coords)
+
+    def count_points_within_circle(self, x_coords, y_coords):
         number_of_contained_points = 0
         for i in range(len(x_coords)):
             if self.contains(x_coords, y_coords, i):
