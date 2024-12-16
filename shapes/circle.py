@@ -19,6 +19,7 @@ class Circle(Shape):
                 if y_coords is not None:
                     if len(y_coords) > 0:
                         if len(x_coords) == len(y_coords):
+                            # check if the point is inside the circle
                             for i in range(len(x_coords)):
                                 self.contains(x_coords, y_coords, i)
                         else:
