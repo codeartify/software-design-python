@@ -1,10 +1,8 @@
 # Long Method / Function and Loop Split 
 
-> Exercise branch: **exercise_7**
+> Exercise branch: **solution_feature_envy**
 >
-> Solution branch: **exercise_7_part_1**
->
-> Solution branch: **exercise_8**
+> Solution branch: **solution_loop_split**
 
 ## Exercise
 
