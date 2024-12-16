@@ -1,29 +1,32 @@
 class Color:
-    def __init__(self, color_as_text):
-        self.color_as_text = color_as_text
+    def __init__(self, color_code):
+        self.color_as_text = None
         self.color_as_hex = None
         self.color_as_rgb_red = None
         self.color_as_rgb_green = None
         self.color_as_rgb_blue = None
         self.error_message = ""
-        self.convert_text_value_to_rgb_and_hex()
+        self.convert_text_value_to_rgb_and_hex(color_code)
 
-    def convert_text_value_to_rgb_and_hex(self):
+    def convert_text_value_to_rgb_and_hex(self, color_code):
         self.error_message = ""
         # set to Red
-        if self.color_as_text == "Red":
+        if color_code == "0":
+            self.color_as_text = "Red"
             self.color_as_rgb_red = "255"
             self.color_as_rgb_blue = "0"
             self.color_as_rgb_green = "0"
             self.color_as_hex = "#FF0000"
-        elif self.color_as_text == "Blue":
+        elif color_code == "1":
             # set to Blue
+            self.color_as_text = "Blue"
             self.color_as_rgb_red = "0"
             self.color_as_rgb_blue = "255"
             self.color_as_rgb_green = "0"
             self.color_as_hex = "#00FF00"
-        elif self.color_as_text == "Green":
+        elif color_code == "2":
             # set to Green
+            self.color_as_text = "Green"
             self.color_as_rgb_red = "0"
             self.color_as_rgb_blue = "0"
             self.color_as_rgb_green = "255"
