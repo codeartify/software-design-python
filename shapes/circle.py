@@ -1,11 +1,9 @@
+import math
+
 from shapes.color import Color
 from shapes.point import Point
 from shapes.radius import Radius
 from shapes.shape import Shape
-
-
-def square(value):
-    return value * value
 
 
 def validate_coordinates(x_coords, y_coords):
@@ -38,15 +36,12 @@ class Circle(Shape):
     def count_points_within_circle(self, x_coords, y_coords):
         number_of_contained_points = 0
         for i in range(len(x_coords)):
-            if self.contains(x_coords, y_coords, i):
+            if self.contains(Point(x_coords[i], y_coords[i])):
                 number_of_contained_points += 1
         return number_of_contained_points
 
-    def contains(self, x_coords, y_coords, i):
-        # check if the point is inside the circle
-        delta_x = x_coords[i] - self.center.x
-        delta_y = y_coords[i] - self.center.y
-        return square(delta_x) + square(delta_y) <= square(self.radius.value)
+    def contains(self, point):
+        return self.center.distance_to(point) <= self.radius.value
 
     def move_to(self, x, y):
         self.center = Point(x, y)
