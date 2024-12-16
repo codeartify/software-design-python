@@ -30,21 +30,24 @@ class Circle(Shape):
 
     def count_contained_points(self, x_coords, y_coords):
         validate_coordinates(x_coords, y_coords)
-        return self.count_points_within_circle(x_coords, y_coords)
+        points = Circle.create_points(x_coords, y_coords)
 
-    def count_points_within_circle(self, x_coords, y_coords):
+        return self.count_points_within_circle(points)
+
+    def count_points_within_circle(self, points):
         number_of_contained_points = 0
+        for point in points.points:
+            if self.contains(point):
+                number_of_contained_points += 1
+        return number_of_contained_points
+
+    @staticmethod
+    def create_points(x_coords, y_coords):
         points = []
         for i in range(len(x_coords)):
             point = Point(x_coords[i], y_coords[i])
             points.append(point)
-        points2 = Points(points)
-
-        for point in points2.points:
-            if self.contains(point):
-                number_of_contained_points += 1
-
-        return number_of_contained_points
+        return Points(points)
 
     def contains(self, point):
         return self.center.distance_to(point) <= self.radius.value
