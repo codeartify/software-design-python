@@ -11,7 +11,7 @@
 ## Exercise part 1
 > ```contains``` still uses the primitive ```x_coords```, ```y_coords```, and ```i``` parameters.
 > 
-> * Introduce a ```Point``` class to encapsulate these parameters, such that ```contains``` takes a ```Point``` as an input parameter.
+> * Introduce a ```Point``` as an input parameter of ```contains```.
 
 ## Exercise part 2
 > The ```count_points_within_circle``` method now has two separate concerns:
