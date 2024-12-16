@@ -1,5 +1,6 @@
 from shapes.color import Color
 from shapes.point import Point
+from shapes.points import Points
 from shapes.radius import Radius
 from shapes.shape import Shape
 
@@ -37,8 +38,9 @@ class Circle(Shape):
         for i in range(len(x_coords)):
             point = Point(x_coords[i], y_coords[i])
             points.append(point)
+        points2 = Points(points)
 
-        for point in points:
+        for point in points2.points:
             if self.contains(point):
                 number_of_contained_points += 1
 
