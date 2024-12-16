@@ -36,11 +36,13 @@ class Circle(Shape):
     def count_points_within_circle(self, x_coords, y_coords):
         number_of_contained_points = 0
         for i in range(len(x_coords)):
-            if self.contains(Point(x_coords[i], y_coords[i])):
+            if self.contains(x_coords, y_coords, i):
                 number_of_contained_points += 1
         return number_of_contained_points
 
-    def contains(self, point):
+    def contains(self, x_coords, y_coords, i):
+        # check if the point is inside the circle
+        point = Point(x_coords[i], y_coords[i])
         return self.center.distance_to(point) <= self.radius.value
 
     def move_to(self, x, y):
