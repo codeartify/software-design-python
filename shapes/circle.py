@@ -14,28 +14,20 @@ class Circle(Shape):
 
     def count_contained_points(self, x_coords, y_coords):
         self.number_of_contained_points = 0
-        if x_coords is not None:
-            if len(x_coords) > 0:
-                if y_coords is not None:
-                    if len(y_coords) > 0:
-                        if len(x_coords) == len(y_coords):
-                            # check if the point is inside the circle
-                            for i in range(len(x_coords)):
-                                self.contains(x_coords, y_coords, i)
-                        else:
-                            raise ValueError("Not every provided x coordinate has a matching y coordinate")
-                    else:
-                        raise ValueError("y coordinates are empty")
-                else:
-                    raise ValueError("y coordinates are empty")
-            else:
-                raise ValueError("x coordinates are empty")
-        else:
+        if x_coords is None or len(x_coords) <= 0:
             raise ValueError("x coordinates are empty")
+        if y_coords is None or len(y_coords) <= 0:
+            raise ValueError("y coordinates are empty")
+        if len(x_coords) != len(y_coords):
+            raise ValueError("Not every provided x coordinate has a matching y coordinate")
+            # check if the point is inside the circle
+        for i in range(len(x_coords)):
+            self.contains(x_coords, y_coords, i)
         return self.number_of_contained_points
 
     def contains(self, x_coords, y_coords, i):
-        result = (x_coords[i] - self.x) * (x_coords[i] - self.x) + (y_coords[i] - self.y) * (y_coords[i] - self.y) <= self.r * self.r
+        result = (x_coords[i] - self.x) * (x_coords[i] - self.x) + (y_coords[i] - self.y) * (
+                y_coords[i] - self.y) <= self.r * self.r
         if result:
             self.number_of_contained_points += 1
         return result
