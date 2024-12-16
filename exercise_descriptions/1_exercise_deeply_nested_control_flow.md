@@ -1,7 +1,7 @@
 # Deeply-Nested Control Flow
-> Exercise branch: **main**
+> Exercise branch: **solution_magic_number**
 > 
-> Solution part 1: **exercise_2** 
+> Solution: **solution_deeply_nested_control_flow** 
 >
 ## Exercise
 
@@ -14,4 +14,4 @@
 >    - ```remove redundant else```
 >
 
-## Run tests after each reasonably small refactoring step!
+### Run tests after each reasonably small refactoring step!
