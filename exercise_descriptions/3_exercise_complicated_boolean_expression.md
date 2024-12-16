@@ -1,8 +1,8 @@
 # Complicated Conditional Expression
 
-> Exercise branch: **exercise_2**
+> Exercise branch: **solution_deeply_nested_control_flow**
 > 
-> Solution branch: **exercise_3**
+> Solution branch: **solution_complicated_boolean_expression**
 > 
 ## Exercise 
 
