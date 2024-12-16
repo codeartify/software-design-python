@@ -5,7 +5,7 @@
 | Code Smell                                                                          | Exercise                                | Exercise          | Hints                                                           |
 |-------------------------------------------------------------------------------------|-----------------------------------------|-------------------|-----------------------------------------------------------------|
 | Introduction slides                                                                 | Good / Bad Code, Code Smells            | On whiteboard     |                                                                 |
-| Magic Number / String, Redundant Comment                                            | find on paper                           | On paper          | no refactoring                                                  |
+| Magic Number / String, Redundant Comment                                            | find on paper                           | branch: main      | Introduce variable or constant for "2"                          |
 | Complicated Conditional Expression                                                  | Circle::contains                        | branch: main      | Make it better to read. Extract method, extract variable        |
 | Deeply-Nested Control Flow & Long method                                            | Circle::countContainedPoints            | branch: exercise2 | invert if, merge if, remove redundant else, composed method     |
 | Refactoring slides                                                                  | Refactoring                             |                   |                                                                 |
