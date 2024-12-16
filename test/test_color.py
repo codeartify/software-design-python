@@ -8,27 +8,27 @@ class TestColor(unittest.TestCase):
     def test_should_format_color_as_text(self):
         red = Color("0")
 
-        color_formatted = red.get_color_formatted(False)
+        color_formatted = red.color_as_text
 
         self.assertEqual("Red", color_formatted)
 
     def test_should_format_color_as_text_and_hex_and_rgb(self):
         red = Color("0")
 
-        color_formatted = red.get_color_formatted(True)
+        color_formatted = red.get_color_formatted()
 
         self.assertEqual("Red #FF0000 255:0:0", color_formatted)
 
     def test_should_format_green_as_hex_and_rgb(self):
         green = Color("2")
 
-        color_formatted = green.get_color_formatted(True)
+        color_formatted = green.get_color_formatted()
 
         self.assertEqual("Green #0000FF 0:255:0", color_formatted)
 
     def test_should_format_blue_as_hex_and_rgb(self):
         blue = Color("1")
 
-        color_formatted = blue.get_color_formatted(True)
+        color_formatted = blue.get_color_formatted()
 
         self.assertEqual("Blue #00FF00 0:0:255", color_formatted)

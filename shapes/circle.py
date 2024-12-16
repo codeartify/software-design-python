@@ -27,4 +27,5 @@ class Circle(Shape):
         self.radius = Radius(r)
 
     def format(self):
-        return f'circle: {{\n\tcenter: {self.center.format()} \n\tradius: {self.radius.format()} \n\tcolor: {self.color.get_color_formatted(False)} \n}}'
+        color = self.color
+        return f'circle: {{\n\tcenter: {self.center.format()} \n\tradius: {self.radius.format()} \n\tcolor: {color.color_as_text} \n}}'
