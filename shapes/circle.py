@@ -1,10 +1,9 @@
 from shapes.color import Color
 from shapes.point import Point
 from shapes.radius import Radius
-from shapes.shape import Shape
 
 
-class Circle(Shape):
+class Circle:
     def __init__(self, x, y, r):
         self.center = Point(x, y)
         self.radius = Radius(r)
