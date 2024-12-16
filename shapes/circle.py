@@ -1,4 +1,6 @@
 from shapes.color import Color
+from shapes.point import Point
+from shapes.radius import Radius
 from shapes.shape import Shape
 
 
@@ -21,19 +23,6 @@ def differ_in_length(x_coords, y_coords):
 
 def is_empty(coords):
     return coords is None or len(coords) == 0
-
-
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-
-class Radius:
-    def __init__(self, value):
-        if value <= 0:
-            raise ValueError("Radius needs to be larger 0")
-        self.value = value
 
 
 class Circle(Shape):
@@ -63,8 +52,7 @@ class Circle(Shape):
         self.center = Point(x, y)
 
     def resize(self, r):
-        self.r = r
         self.radius = Radius(r)
 
     def format(self):
-        return f'circle: {{\n\tcenter: ({self.center.x},{self.center.y}) \n\tradius: {self.radius.value} \n\tcolor: {self.color.get_color_formatted(False)} \n}}'
+        return f'circle: {{\n\tcenter: {self.center.format()} \n\tradius: {self.radius.format()} \n\tcolor: {self.color.get_color_formatted(False)} \n}}'
