@@ -19,3 +19,6 @@
 >   * Use this method everywhere where variables are multiplied with themselves. 
 >   * Use the automated refactoring “extract method”. 
 >   * Don’t forget to rename square’s parameter to e.g. “value”.
+
+
+### Run tests after each reasonably small refactoring step!

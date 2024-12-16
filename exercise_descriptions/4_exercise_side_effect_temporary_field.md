@@ -12,3 +12,5 @@
 > - and turn it from a member variable into a variable local to the method.
 > 
 > Use the side-effect-free ```contains``` method withing the ```count_points_within_circle``` method.
+
+### Run tests after each reasonably small refactoring step!

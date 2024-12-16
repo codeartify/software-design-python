@@ -1,14 +1,14 @@
 # Long method
-> Exercise branch: **exercise_3** 
+> Exercise branch: **solution_side_effect** 
 > 
-> Solution branch: **exercise_4**
+> Solution branch: **solution_long_method**
 >
 ## Exercise
 
-### Remove long method flow in ```count_contained_points```!
+### Create composed method in ```count_contained_points```!
  
-## Exercise part 2
-> Improve readability even more by ```extracting methods``` for 
+## Exercise
+> Improve readability by ```extracting methods``` for 
 >    - validating coordinates (e.g. ```validate_coordinates(x_coords, y_coords)```) and 
 >    - counting points within the circle (e.g. ```count_points_within_circle(x_coords, y_coords)```)
 > 
@@ -18,4 +18,4 @@
 >   these methods to make it mean something to a human being rather 
 >   than a machine.
 
-## Run tests after each reasonably small refactoring step!
+### Run tests after each reasonably small refactoring step!
