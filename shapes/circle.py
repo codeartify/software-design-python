@@ -31,13 +31,13 @@ class Point:
 
 class Radius:
     def __init__(self, value):
+        if value <= 0:
+            raise ValueError("Radius needs to be larger 0")
         self.value = value
 
 
 class Circle(Shape):
     def __init__(self, x, y, r):
-        if r <= 0:
-            raise ValueError("Radius needs to be larger 0")
         self.center = Point(x, y)
         self.radius = Radius(r)
         self.color = Color(Color.GREEN)
