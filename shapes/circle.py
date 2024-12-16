@@ -26,8 +26,9 @@ class Circle(Shape):
         return self.number_of_contained_points
 
     def contains(self, x_coords, y_coords, i):
-        result = (x_coords[i] - self.x) * (x_coords[i] - self.x) + (y_coords[i] - self.y) * (
-                y_coords[i] - self.y) <= self.r * self.r
+        delta_x = x_coords[i] - self.x
+        delta_y = y_coords[i] - self.y
+        result = delta_x * delta_x + delta_y * delta_y <= self.r * self.r
         if result:
             self.number_of_contained_points += 1
         return result
