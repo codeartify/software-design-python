@@ -29,12 +29,17 @@ class Point:
         self.y = y
 
 
+class Radius:
+    def __init__(self, value):
+        self.value = value
+
+
 class Circle(Shape):
     def __init__(self, x, y, r):
         if r <= 0:
             raise ValueError("Radius needs to be larger 0")
         self.center = Point(x, y)
-        self.r = r
+        self.radius = Radius(r)
         self.color = Color(Color.GREEN)
 
     def count_contained_points(self, x_coords, y_coords):
@@ -52,13 +57,14 @@ class Circle(Shape):
         # check if the point is inside the circle
         delta_x = x_coords[i] - self.center.x
         delta_y = y_coords[i] - self.center.y
-        return square(delta_x) + square(delta_y) <= square(self.r)
+        return square(delta_x) + square(delta_y) <= square(self.radius.value)
 
     def move_to(self, x, y):
         self.center = Point(x, y)
 
     def resize(self, r):
         self.r = r
+        self.radius = Radius(r)
 
     def format(self):
-        return f'circle: {{\n\tcenter: ({self.center.x},{self.center.y}) \n\tradius: {self.r} \n\tcolor: {self.color.get_color_formatted(False)} \n}}'
+        return f'circle: {{\n\tcenter: ({self.center.x},{self.center.y}) \n\tradius: {self.radius.value} \n\tcolor: {self.color.get_color_formatted(False)} \n}}'
