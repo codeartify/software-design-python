@@ -1,7 +1,7 @@
 # Speculative Generality and Lazy Class
-> Exercise branch: **exercise_10**
+> Exercise branch: **solution_flag_parameter**
 >
-> Solution branch: **exercise_11**
+> Solution branch: **solution_lazy_class**
 
 ## Exercise
 
