@@ -33,9 +33,15 @@ class Circle(Shape):
 
     def count_points_within_circle(self, x_coords, y_coords):
         number_of_contained_points = 0
+        points = []
         for i in range(len(x_coords)):
-            if self.contains(Point(x_coords[i], y_coords[i])):
+            point = Point(x_coords[i], y_coords[i])
+            points.append(point)
+
+        for point in points:
+            if self.contains(point):
                 number_of_contained_points += 1
+
         return number_of_contained_points
 
     def contains(self, point):
