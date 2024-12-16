@@ -2,23 +2,24 @@
 
 ## Schedule
 
-| Code Smell                                                                          | Exercise                                | Exercise          | Hints                                                           |
-|-------------------------------------------------------------------------------------|-----------------------------------------|-------------------|-----------------------------------------------------------------|
-| Introduction slides                                                                 | Good / Bad Code, Code Smells            | On whiteboard     |                                                                 |
-| Magic Number / String, Redundant Comment                                            | find on paper                           | branch: main      | Introduce variable or constant for "2"                          |
-| Complicated Conditional Expression                                                  | Circle::contains                        | branch: main      | Make it better to read. Extract method, extract variable        |
-| Deeply-Nested Control Flow & Long method                                            | Circle::countContainedPoints            | branch: exercise2 | invert if, merge if, remove redundant else, composed method     |
-| Refactoring slides                                                                  | Refactoring                             |                   |                                                                 |
-| Side effect & temporary field, Duplicate & Reduce                                   | Circle::countContainedPoints / contains | branch: exercise3 | Duplicate and Reduce                                            |
-| Primitive Obsession, Data Clump, Long Parameter List, Parallel Change, Narrow Change | Circle: x, y, r                         | branch: exercise4 | Parallel Change, Point, Radius, Discussion Value Objects        |
-| Data Class, Feature Envy                                                            | Radius validation, Circle::format()     | branch: exercise5 |                                                                 |   
-| Loop Split                                                                          | Circle::countContainedPoints            | branch: exercise6 | Maybe do these two                                              |
-| Emerging Software Design                                                            | Circle::countContainedPoints            | branch: exercise7 |                                                                 |
-| Flag Parameter                                                                      | Circle::format()                        | branch: exercise8 | Extract Method for subbranches, Elvis Operator trick            |
-| Bad Name                                                                            | Naming Exercise (ppt)                   |                   |                                                                 |
-| Speculative Generality & Lazy Class                                                 | Circle extends Shape                    | branch: exercise9 | Only shown by trainer                                           |
-| Inconsistent Solution, Dead Code                                                    | Color                                   |                   | Find in code (e.g. String concat, errorMessage), no refactoring |    
-| Outro                                                                               | -                                       | -                 | slides                                                          |
+| Code Smell                                                                           | Exercise                                                                | Exercise          | Hints                                                           |
+|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------|-------------------|-----------------------------------------------------------------|
+| Introduction slides                                                                  | Good / Bad Code, Code Smells                                            | On whiteboard     |                                                                 |
+| Redundant Comment                                                                    | Circle::count_contained_points Color::convert_text_value_to_rgb_and_hex | branch: main      | Find and discuss                                                |
+| Magic Number / String                                                                | circle.py  __init__                                                     | branch: main      | Introduce variable or constant for "2"                          |
+| Complicated Conditional Expression                                                   | Circle::contains                                                        | branch: main      | Make it better to read. Extract method, extract variable        |
+| Deeply-Nested Control Flow & Long method                                             | Circle::countContainedPoints                                            | branch: exercise2 | invert if, merge if, remove redundant else, composed method     |
+| Refactoring slides                                                                   | Refactoring                                                             |                   |                                                                 |
+| Side effect & temporary field, Duplicate & Reduce                                    | Circle::countContainedPoints / contains                                 | branch: exercise3 | Duplicate and Reduce                                            |
+| Primitive Obsession, Data Clump, Long Parameter List, Parallel Change, Narrow Change | Circle: x, y, r                                                         | branch: exercise4 | Parallel Change, Point, Radius, Discussion Value Objects        |
+| Data Class, Feature Envy                                                             | Radius validation, Circle::format()                                     | branch: exercise5 |                                                                 |   
+| Loop Split                                                                           | Circle::countContainedPoints                                            | branch: exercise6 | Maybe do these two                                              |
+| Emerging Software Design                                                             | Circle::countContainedPoints                                            | branch: exercise7 |                                                                 |
+| Flag Parameter                                                                       | Circle::format()                                                        | branch: exercise8 | Extract Method for subbranches, Elvis Operator trick            |
+| Bad Name                                                                             | Naming Exercise (ppt)                                                   |                   |                                                                 |
+| Speculative Generality & Lazy Class                                                  | Circle extends Shape                                                    | branch: exercise9 | Only shown by trainer                                           |
+| Inconsistent Solution, Dead Code                                                     | Color                                                                   |                   | Find in code (e.g. String concat, errorMessage), no refactoring |    
+| Outro                                                                                | -                                                                       | -                 | slides                                                          |
 
 ## Printouts
 
