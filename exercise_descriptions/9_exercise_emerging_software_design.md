@@ -1,12 +1,8 @@
 # Long Method / Function
  
-> Exercise branch: **exercise_8**
-> 
-> Solution part 1: **exercise_8_part_1**
-> 
-> Solution part 2: **exercise_8_part_2**
+> Exercise branch: **solution_loop_split**
 >
-> Solution part 3: **exercise_9**
+> Solution branch: **solution_emerging_software_design**
 
 ## Exercise
 
