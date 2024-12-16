@@ -9,7 +9,7 @@ class Circle(Shape):
         self.x = x
         self.y = y
         self.r = r
-        self.color = Color("2")
+        self.color = Color(Color.GREEN)
         self.number_of_contained_points = 0
 
     def count_contained_points(self, x_coords, y_coords):

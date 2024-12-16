@@ -1,4 +1,12 @@
 class Color:
+    GREEN = "2"
+
+    def get_color_formatted(self, include_hex_and_rgb):
+        if include_hex_and_rgb:
+            return f"{self.color_as_text} {self.color_as_hex} {self.color_as_rgb_red}:{self.color_as_rgb_green}:{self.color_as_rgb_blue}"
+        else:
+            return self.color_as_text
+
     def __init__(self, color_code):
         self.color_as_text = None
         self.color_as_hex = None
@@ -46,8 +54,4 @@ class Color:
     def get_error_message(self):
         return self.error_message
 
-    def get_color_formatted(self, include_hex_and_rgb):
-        if include_hex_and_rgb:
-            return f"{self.color_as_text} {self.color_as_hex} {self.color_as_rgb_red}:{self.color_as_rgb_green}:{self.color_as_rgb_blue}"
-        else:
-            return self.color_as_text
+
