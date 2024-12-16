@@ -1,7 +1,7 @@
 # Side Effect and Temporary Field
-> Exercise branch: **exercise_4**
+> Exercise branch: **complicated_boolean_expression**
 >
-> Solution branch: **exercise_5**
+> Solution branch: **solution_side_effect**
 
 ## Exercise
 
