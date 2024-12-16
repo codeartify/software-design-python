@@ -1,8 +1,8 @@
 # Flag Parameter
 
-> Exercise branch: **exercise_9**
+> Exercise branch: **solution_emerging_software_design**
 >
-> Solution branch: **exercise_10**
+> Solution branch: **solution_flag_parameter**
 
 
 ## Exercise
