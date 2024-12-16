@@ -1,10 +1,9 @@
 # Primitive Obsession, Parallel Change
 
-> Exercise branch: **exercise_5**
+> Exercise branch: **solution_long_method**
 > 
-> Exercise branch: **exercise_5_part_1**
->
-> Solution branch: **exercise_6**
+> Solution branch: **solution_primitive_obsession**
+
 
 ## Exercise
 
